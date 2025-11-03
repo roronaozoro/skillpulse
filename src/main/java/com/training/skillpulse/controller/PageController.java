@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomePageController {
+public class PageController {
 
     @GetMapping("/")
     public String langingPage() {
@@ -22,4 +22,16 @@ public class HomePageController {
         return "connect-us";
     }
 
+    @GetMapping("/gallery.html")
+    public String getGalleryPage()
+    {
+        return "gallery";
+    }
+
+
+    @GetMapping("/services.html")
+    public String getServicePage()
+    {
+        return "services";
+    }
 }
