@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel ="stylesheet" href="/css/structure.css" />
-    <link rel ="stylesheet" href="/css/gallery.css" />
+    <link rel ="stylesheet" href="/css/clients.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -38,44 +38,18 @@
     </div>
 </header>
 
-<!-- ===== GALLERY ===== -->
-
-<!-- ===== IMAGE CAROUSEL SECTION ===== -->
-<section id="carousel" class="carousel-section">
-    <h2 class="carousel-title">Our Highlights</h2>
-
-    <div class="carousel-wrapper">
-        <div class="carousel-track">
-            <div class="carousel-slide">
-                <img src="/img/home_section_1.png" alt="Training Workshop">
-                <div class="carousel-caption">
-                    <h3>Training Workshop</h3>
-                    <p>Technical Module Training on Fasteners Client: Unilever Bangladesh </p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="/img/lecture1.png" alt="Team Collaboration">
-                <div class="carousel-caption">
-                    <h3>Team Collaboration</h3>
-                    <p>Technical Module Training on Bearing & Seals Client: Unilever Bangladesh </p>
-                </div>
-            </div>
-
-            <div class="carousel-slide">
-                <img src="/img/gallery.png" alt="Innovation at Work">
-                <div class="carousel-caption">
-                    <h3>Innovation at Work</h3>
-                    <p>Live Session on Shaft Alignment Client: BPDB, Shikalbaha 225 MW Dual Fuel Power Plant</p>
-                </div>
+<!-- ===== CLIENTS SECTION ===== -->
+<section class="clients-section">
+    <div class="clients-container">
+        <h2>Our <span>Clients</span></h2>
+        <div class="client-logos">
+            <div class="client-card">
+                <img src="/img/unilever.png" alt="Unilever Logo" class="client-logo">
+                <p>Unilever</p>
             </div>
         </div>
-
-        <button class="carousel-btn prev">&#10094;</button>
-        <button class="carousel-btn next">&#10095;</button>
     </div>
 </section>
-
-
 
 <!-- ===== FOOTER ===== -->
 <footer id="footer" class="footer">
@@ -119,15 +93,29 @@
         </div>
     </div>
 </footer>
-<script src="/js/app.js"></script>
 <script>
     const menu = document.querySelector('#mobile-menu');
     const nav = document.querySelector('.nav ul');
     menu.addEventListener('click', () => {
-      menu.classList.toggle('active');
-      nav.classList.toggle('active');
+       menu.classList.toggle('active');
+       nav.classList.toggle('active');
     });
-    lucide.createIcons();
+   lucide.createIcons();
+
+const animatedSections = document.querySelectorAll('.client-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animatedSections.forEach(section => observer.observe(section));
+
+
 </script>
 </body>
 </html>

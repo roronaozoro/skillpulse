@@ -28,10 +28,21 @@ public class PageController {
         return "gallery";
     }
 
-
     @GetMapping("/services.html")
     public String getServicePage()
     {
         return "services";
+    }
+
+    @GetMapping("/about-us.html")
+    public String getAboutUs()
+    {
+        return "about-us";
+    }
+
+    @GetMapping("/clients.html")
+    public String getClients()
+    {
+        return "clients";
     }
 }
