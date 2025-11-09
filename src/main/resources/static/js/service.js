@@ -10,49 +10,66 @@ const closeBtn = document.querySelector('.close-btn');
       title: "Mechanical System Optimization",
       icon: "cpu",
       content: `
-        <ul>
-          <li>Fasteners Dynamics: Analysis, Reliability & Maintenance</li>
-          <li>Industrial Motion Control: Transmission Components & Systems</li>
-          <li>Tribology and Maintenance of Bearings & Seals</li>
-          <li>Engineering Pneumatics: Design, Analysis & Industrial Applications</li>
-          <li>Industrial Mechatronics: PLC & Sensor Technologies</li>
-          <li>Zero Breakdown Strategy: Failure Analysis of Component</li>
-          <li>Reliability 4.0: Condition Based Monitoring Essentials</li>
-          <li>Industry 4.0: Implementation of IoT Devices</li>
-          <li>Calibration Excellence: Accuracy in Industrial Measurements</li>
-        </ul>
+        <div class="modal-training-content">
+          <p class="modal-training-intro">
+            Our Mechanical System Optimization programs enhance engineering performance by integrating reliability-centered maintenance,
+            advanced diagnostics, and Industry 4.0 technologies — empowering professionals to ensure operational excellence and system reliability.
+          </p>
+
+          <ul class="modal-training-list">
+            <li><i class="fa fa-bolt"></i> Fasteners Dynamics: Analysis, Reliability & Maintenance</li>
+            <li><i class="fa fa-cogs"></i> Industrial Motion Control: Transmission Components & Systems</li>
+            <li><i class="fa fa-gear"></i> Tribology and Maintenance of Bearings & Seals</li>
+            <li><i class="fa fa-compress"></i> Engineering Pneumatics: Design, Analysis & Industrial Applications</li>
+            <li><i class="fa fa-robot"></i> Industrial Mechatronics: PLC & Sensor Technologies</li>
+            <li><i class="fa fa-wrench"></i> Zero Breakdown Strategy: Failure Analysis of Components</li>
+            <li><i class="fa fa-chart-line"></i> Reliability 4.0: Condition-Based Monitoring Essentials</li>
+            <li><i class="fa fa-globe"></i> Industry 4.0: Implementation of IoT Devices</li>
+            <li><i class="fa fa-balance-scale"></i> Calibration Excellence: Accuracy in Industrial Measurements</li>
+          </ul>
+        </div>
       `
-    },
+    }
+,
     soft_skill_training: {
       title: "Soft Skill Trainings",
       icon: "users",
       content: `
-        <ul>
-          <li>Kaizen: The impact of Continuous Improvement</li>
-          <li>Application of Data Analysis Tools</li>
-          <li>Process Analysis& Development</li>
-          <li>Leadership Competency</li>
-          <li>Lean Manufacturing</li>
-        </ul>
+        <div class="modal-training-content">
+          <p class="modal-training-intro">
+            Empower professionals with the behavioral and managerial skills required to lead, collaborate, and drive performance excellence in dynamic industrial environments.
+          </p>
+
+          <ul class="modal-training-list">
+            <li><i class="fa fa-lightbulb-o"></i> Kaizen: The Impact of Continuous Improvement</li>
+            <li><i class="fa fa-bar-chart"></i> Application of Data Analysis Tools</li>
+            <li><i class="fa fa-cogs"></i> Process Analysis & Development</li>
+            <li><i class="fa fa-user-circle"></i> Leadership Competency</li>
+            <li><i class="fa fa-industry"></i> Lean Manufacturing</li>
+          </ul>
+        </div>
       `
-    },
+    }
+,
    industrial_solution: {
      title: "Engineering Solutions",
      icon: "cog",
      content: `
-       <p>
-         We deliver sustainable industrial engineering solutions powered by cutting-edge technology,
-         driving manufacturing excellence. Our strategic approach reduces operational costs and
-         accelerates business growth.
-       </p>
-       <ul>
-         <li>Installation & Servicing</li>
-         <li>Advanced Tools Sales & Service</li>
-         <li>Instrument Calibration Services</li>
-         <li>Machine Maintenance & Troubleshooting</li>
-         <li>Automation System Design, Calibration & Maintenance</li>
-         <li>Industrial Inspection</li>
-       </ul>
+       <div class="modal-training-content">
+         <p class="modal-training-intro">
+           We provide sustainable, high-impact industrial engineering solutions powered by advanced technologies —
+           enhancing productivity, ensuring reliability, and driving manufacturing excellence across sectors.
+         </p>
+
+         <ul class="modal-training-list">
+           <li><i class="fa fa-wrench"></i> Installation & Servicing</li>
+           <li><i class="fa fa-cogs"></i> Advanced Tools Sales & Service</li>
+           <li><i class="fa fa-balance-scale"></i> Instrument Calibration Services</li>
+           <li><i class="fa fa-industry"></i> Machine Maintenance & Troubleshooting</li>
+           <li><i class="fa fa-microchip"></i> Automation System Design, Calibration & Maintenance</li>
+           <li><i class="fa fa-search"></i> Industrial Inspection</li>
+         </ul>
+       </div>
      `
    }
   };

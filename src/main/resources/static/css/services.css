@@ -152,6 +152,81 @@
   justify-content: center;
   align-items: center;
 }
+/* ===== Modal Training Content ===== */
+.modal-training-content {
+  text-align: left;
+  padding: 20px;
+  color: #001a4d;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-training-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #001a4d;
+  margin-bottom: 10px;
+  border-left: 4px solid #0052D4;
+  padding-left: 12px;
+}
+
+.modal-training-intro {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.modal-training-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-training-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 12px;
+  padding-left: 32px;
+  position: relative;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.modal-training-list li i {
+  color: #0052D4;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.modal-training-list li:hover i {
+  color: #4364F7;
+  transform: scale(1.2);
+}
+
+.modal-training-list li:hover {
+  transform: translateX(5px);
+  color: #001a4d;
+}
+
+/* Smooth fade-in animation for modal */
+.modal-training-content {
+  animation: fadeInModal 0.6s ease forwards;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .modal-content {
   background: #fff;
