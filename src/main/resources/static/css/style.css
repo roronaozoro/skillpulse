@@ -1,0 +1,146 @@
+ /* Replace the URL below with your background image path (e.g. "images/bg.jpg") */
+        :root{
+            --bg: url('/img/landingpage.jpg') center/cover no-repeat fixed;
+            --overlay: rgba(0,0,0,0.45);
+            --accent: #ff6b35;
+            --text: #fff;
+            --radius: 10px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,body{
+            height:100%;
+            margin:0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color:var(--text);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+/* ===== Sticky Header ===== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 2px solid #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+    .site-logo{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:200px; /* adjust size if needed */
+    z-index:9999;
+}
+
+        /* Background + dim overlay */
+        .bg {
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background: var(--bg);
+            position:relative;
+        }
+        .bg::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:var(--overlay);
+            pointer-events:none;
+        }
+
+        /* Centered card content */
+        .card {
+            position:relative; /* above overlay */
+            z-index:1;
+            text-align:center;
+            padding:36px;
+            max-width:1000px;
+            width:90%;
+            border-radius:var(--radius);
+            backdrop-filter: blur(6px) saturate(120%);
+            -webkit-backdrop-filter: blur(6px) saturate(120%);
+        }
+
+        .kicker{
+            display:inline-block;
+            font-size:20px;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            background:rgba(255,255,255,0.06);
+            padding:6px 10px;
+            border-radius:999px;
+            margin-bottom:16px;
+            color:rgba(255,255,255,0.9);
+        }
+
+        h1{
+            margin:0 0 12px 0;
+            font-size:clamp(28px,5vw,56px);
+            line-height:1.02;
+            font-weight:700;
+            text-shadow:0 6px 18px rgba(0,0,0,0.45);
+        }
+
+        p.lead{
+            margin:0 0 28px 0;
+            font-size:clamp(14px,2.2vw,20px);
+            color:rgba(255,255,255,0.9);
+            max-width:720px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        .btn {
+            display:inline-block;
+            text-decoration:none;
+            background:linear-gradient(90deg,var(--accent),#f3b405);
+            color:white;
+            padding:14px 28px;
+            border-radius:999px;
+            font-weight:700;
+            letter-spacing:1px;
+            box-shadow:0 10px 30px rgba(9, 218, 131, 0.22);
+            transition:transform .16s ease, box-shadow .16s ease;
+            border:0;
+            cursor:pointer;
+        }
+        .btn:active{ transform:translateY(1px) scale(.998); }
+        .btn:focus{ outline:3px solid rgba(179, 79, 233, 0.18); outline-offset:4px; }
+
+        /* small footer hint */
+        .hint{ margin-top:18px; font-size:13px; color:rgba(255,255,255,0.8); }
+
+        @media (prefers-reduced-motion: no-preference){
+            .card{ transform:translateY(0); transition:transform .6s cubic-bezier(.2,.9,.3,1); }
+        }

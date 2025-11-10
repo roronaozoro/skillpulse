@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SkillPulse</title>
+    <link rel="icon" type="image/x-icon" href="/img/header-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel ="stylesheet" href="/css/structure.css" />
+    <link rel ="stylesheet" href="/css/clients.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="sticky-header">
+    <div class="logo">
+        <img src="/img/logo.png" alt="SkillPulse Logo">
+    </div>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html"><i data-lucide="home"></i><span>Home</span></a></li>
+            <li><a href="about-us.html"><i data-lucide="info"></i><span>About</span></a></li>
+            <li><a href="services.html"><i data-lucide="briefcase"></i><span>Services</span></a></li>
+            <li><a href="clients.html"><i data-lucide="users"></i><span>Clients</span></a></li>
+            <li><a href="gallery.html"><i data-lucide="image"></i><span>Gallery</span></a></li>
+            <li><a href="connect-us.html"><i data-lucide="mail"></i><span>Contact</span></a></li>
+            <li><a href="#" class="cta-btn">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</header>
+
+<!-- ===== CLIENTS SECTION ===== -->
+<section class="clients-section">
+    <div class="clients-container">
+        <h2>Our <span>Clients</span></h2>
+        <div class="client-logos">
+            <div class="client-card">
+                <img src="/img/unilever.png" alt="Unilever Logo" class="client-logo">
+            </div>
+            <div class="client-card">
+                <img src="/img/pdb.jpeg" alt="PDB Logo" class="client-logo">
+            </div>
+            <div class="client-card">
+                <img src="/img/unity.jpeg" alt="Unity Logo" class="client-logo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer" class="footer">
+    <div class="footer-overlay">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/img/logo.png" alt="SkillPulse Logo">
+                <p class="tagline">Excellence in Motion</p>
+                <a href="#" class="footer-link">Company Profile</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Partnerships</h4>
+                <p><a href="mailto:hr@skillpulsebd.com">hr@skillpulsebd.com</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Opportunities</h4>
+                <p>Careers — Join us, grow together</p>
+                <p>Become an Instructor</p>
+                <p><a href="mailto:career@skillpulsebd.com">career@skillpulsebd.com</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Skill Pulse</p>
+                <p>Email: <a href="mailto:info@skillpulsebd.com">info@skillpulsebd.com</a></p>
+                <p>Tel: <a href="tel:+8801786502870">+880-1786502870</a></p>
+            </div>
+        </div>
+
+        <!-- Social Icons (centered beside logo) -->
+        <div class="footer-social-vertical">
+            <a href="https://www.facebook.com/skillpulsebd" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/skillpulsebd" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCFXe3iD-kfj1ohJE-OydlyQ" aria-label="YouTube"><i class="fa fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 SkillPulse — All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+<script>
+    const menu = document.querySelector('#mobile-menu');
+    const nav = document.querySelector('.nav ul');
+    menu.addEventListener('click', () => {
+       menu.classList.toggle('active');
+       nav.classList.toggle('active');
+    });
+   lucide.createIcons();
+
+const animatedSections = document.querySelectorAll('.client-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animatedSections.forEach(section => observer.observe(section));
+
+
+</script>
+</body>
+</html>
